@@ -1,0 +1,49 @@
+<div class="col-md-6 offset-md-3" style="font-style: italic;">
+    <p style="font-style: italic; font-size: 30px; font-family: bold;" >
+        Add Doctor
+    </p>
+    <form (ngSubmit) = "onSubmit()">
+    
+        <div class="form-group">
+            <label> Name</label>
+            <input type="text" class ="form-control" id = "Name"
+                [(ngModel)] = "doctor.name" name = "Name" placeholder="Enter Name" required>
+        </div>
+        <br>
+        <div class="form-group">
+            <label> Age</label>
+            <input type="number" class ="form-control" id = "age"
+                [(ngModel)] = "doctor.age" name = "age" placeholder="Enter age">
+        </div>
+        <br>
+
+        <div class="form-group">
+            <label for="gender">Gender:</label>
+            <div>
+                <div>
+                    <input id="Male" type="radio" value="Male" [(ngModel)] = "doctor.gender" name="gender" >
+                    <label for="Male">Male</label>
+                </div>
+                <div>
+                    <input id="Female" type="radio" value="Female" [(ngModel)] = "doctor.gender" name="gender">
+                    <label for="Female">Female</label>
+                </div>
+            </div>
+            </div>
+            <br>
+
+            <div class="form-group">
+                <label> Specialist</label>
+                <input type="text" class ="form-control" id = "specialist"
+                    [(ngModel)] = "doctor.specialist" name = "specialist" placeholder="Enter Specialization">
+            </div>
+            <br>
+            <div class="form-group">
+                <label> Patients attended</label>
+                <input type="number" class ="form-control" id = "patients"
+                    [(ngModel)] = "doctor.numberOfPatients" name = "patients" placeholder="No.of patients attended">
+            </div>
+    <br>
+        <button class = "btn btn-success" type ="submit">Submit</button>
+    </form>
+    </div>
